@@ -1,0 +1,36 @@
+import uz.zafarbek.mytaxi.buildsrc.Libs
+import uz.zafarbek.mytaxi.buildsrc.Constants
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+apply from: "${project.rootDir}/commons.gradle"
+
+android {
+    defaultConfig {
+        applicationId Constants.App.applicationId
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+    implementation(Libs.AndroidX.coreKtx)
+    implementation(Libs.AndroidX.appcompat)
+    implementation(Libs.Material.material)
+    implementation(Libs.ConstraintLayout.constraintLayout)
+    implementation(Libs.Navigation.navigation_ui)
+    implementation(Libs.Navigation.navigation_fragment)
+
+    implementation project(Constants.Modules.core)
+    implementation project(Constants.Modules.domain)
+    implementation project(Constants.Modules.main)
+    implementation project(Constants.Modules.navigation)
+    implementation project(Constants.Modules.network)
+    implementation project(Constants.Modules.datastore)
+    implementation project(Constants.Modules.database)
+    implementation 'com.google.android.gms:play-services-base:18.0.1'
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+}

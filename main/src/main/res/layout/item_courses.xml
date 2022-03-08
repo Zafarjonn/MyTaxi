@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:elevation="6dp"
+    app:cardCornerRadius="@dimen/margin_10"
+    android:layout_marginTop="@dimen/margin_20"
+    android:layout_marginHorizontal="@dimen/margin_20"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:ignore="contentDescription">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/news_image_height"
+        android:layout_height="@dimen/news_image_height"
+        android:layout_margin="@dimen/margin_10dp"
+        android:background="@drawable/bg_course_item"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/HalfCircleCorneredImageView" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/complete"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:text="Course name Cyber Security" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/complete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin_end"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:text="0/2 Completed" />
+
+    <LinearLayout
+        android:id="@+id/constrain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:orientation="vertical"
+        android:background="@drawable/bg_course_item"
+        android:padding="@dimen/padding_10"
+        app:layout_constraintTop_toBottomOf="@id/image">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Qani boshladik" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin_end"
+            android:drawableStart="@drawable/time"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="5 min" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:drawableRight="@drawable/play"
+            android:text="@string/START"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/constrain"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_section" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,20 @@
+import uz.zafarbek.mytaxi.buildsrc.Libs
+import uz.zafarbek.mytaxi.buildsrc.Constants
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+apply from: "${project.rootDir}/commons.gradle"
+
+android {}
+
+dependencies {
+    api(Libs.Navigation.navigation_ui)
+    api(Libs.Navigation.navigation_fragment)
+    api(Libs.Navigation.common)
+
+    implementation project(Constants.Modules.core)
+}

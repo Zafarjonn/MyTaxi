@@ -1,0 +1,84 @@
+import uz.zafarbek.mytaxi.buildsrc.Libs
+import uz.zafarbek.mytaxi.buildsrc.Constants
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    compileSdk Constants.Build.compileSdk
+
+    defaultConfig {
+        minSdk Constants.App.minSdk
+        targetSdk Constants.App.targetSdk
+        versionCode Constants.App.versionCode
+        versionName Constants.App.versionName
+
+        testInstrumentationRunner Constants.App.testInstrumentationRunner
+    }
+
+    buildTypes {
+        Properties properties = new Properties()
+        if (project.rootProject.file('local.properties').canRead())
+            properties.load(new FileInputStream(project.rootProject.file('local.properties')))
+        else throw new GradleException("Could not read local.properties!")
+
+        debug {
+            buildConfigField("String", "BASE_URL", properties["BASE_URL"])
+            buildConfigField("String", "BUILD_TIME", "\"" + System.currentTimeMillis().toString() + "\"")
+        }
+        release {
+            buildConfigField("String", "BASE_URL", properties["BASE_URL"])
+            buildConfigField("String", "BUILD_TIME", "\"" + System.currentTimeMillis().toString() + "\"")
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = Constants.Build.jvmTarget
+    }
+
+    configurations {
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains', module: 'annotations'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation(Libs.AndroidX.coreKtx)
+    implementation(Libs.AndroidX.appcompat)
+    implementation(Libs.Material.material)
+    implementation(Libs.Lifecycle.lifecycle)
+    implementation(Libs.AndroidX.Constraint.constraintLayout)
+    implementation(Libs.Hilt.hilt)
+    kapt(Libs.Hilt.hiltKapt)
+    implementation(Libs.Kotlin.reflect)
+    implementation(Libs.Binding.viewBindingDelegate)
+    implementation(Libs.Shimmer.shimmer)
+    implementation(Libs.Toasty.toasty)
+    implementation(Libs.Zelory.zelory)
+    testImplementation(Libs.Tests.junit)
+    testImplementation(Libs.Tests.coroutineTest)
+    androidTestImplementation(Libs.Tests.junitTest)
+    androidTestImplementation(Libs.Tests.espresso)
+    implementation(Libs.Coroutines.core)
+    implementation(Libs.Coroutines.android)
+    implementation(Libs.Paging.paging)
+    implementation(Libs.PlayCore.playCore)
+    implementation(Libs.PlayCore.playCoreKtx)
+    implementation(Libs.WorkManager.work)
+    implementation(Libs.Lottie.lottie)
+    implementation(Libs.ScrollProgress.scrollProgress)
+    kapt(Libs.Room.kapt)
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+}

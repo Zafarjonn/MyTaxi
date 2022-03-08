@@ -1,0 +1,29 @@
+import uz.zafarbek.mytaxi.buildsrc.Libs
+import uz.zafarbek.mytaxi.buildsrc.Constants
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+apply from: "${project.rootDir}/commons.gradle"
+
+android {}
+
+dependencies {
+
+    api(Libs.Retrofit.retrofit)
+    api(Libs.Retrofit.retrofit_moshi)
+    api(Libs.Moshi.moshi)
+    kapt(Libs.Moshi.kapt)
+
+    api(Libs.OkHttp.okhttp)
+
+    debugApi(Libs.Chucker.chucker_debug)
+    releaseApi(Libs.Chucker.chucker_release)
+
+    implementation(Libs.Paging.paging)
+
+    implementation project(Constants.Modules.domain)
+    implementation project(Constants.Modules.core)
+}

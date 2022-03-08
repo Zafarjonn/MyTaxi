@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/information"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    tools:text="fsjfbka fabfajfladsufae ufaelfna ehwiufhawefbukjbfbau"
+    android:padding="@dimen/padding_5"
+    android:fontFamily="@font/montserrat_regular"
+    android:layout_height="wrap_content">
+
+</com.google.android.material.textview.MaterialTextView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_details_edit_text">10dp</dimen>
+    <dimen name="padding_default">10dp</dimen>
+    <dimen name="corner_details_edit_text">10dp</dimen>
+    <dimen name="details_spinner_height">44dp</dimen>
+    <dimen name="corner_details_upload_image">10dp</dimen>
+    <dimen name="add_details_upload_image_height">150dp</dimen>
+    <dimen name="margin_default">10dp</dimen>
+    <dimen name="padding_buttons">16dp</dimen>
+    <dimen name="medium_icon_size">36dp</dimen>
+    <dimen name="extra_large_icon_size">72dp</dimen>
+    <dimen name="profile_image_size">100dp</dimen>
+    <dimen name="drawer_image_size">60dp</dimen>
+    <dimen name="margin_light">5dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="dimen_16dp">16dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_48dp">48dp</dimen>
+    <dimen name="dimen_12dp">12dp</dimen>
+    <dimen name="default_margin">20dp</dimen>
+    <dimen name="default_padding">15dp</dimen>
+    <dimen name="news_image_height">54dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="default_icon_size">24dp</dimen>
+    <dimen name="default_margin_end">20dp</dimen>
+    <dimen name="default_padding_light">5dp</dimen>
+    <dimen name="margin_top_youtube_collapsed">15dp</dimen>
+</resources>
