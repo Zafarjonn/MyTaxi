@@ -25,10 +25,12 @@ android {
 
         debug {
             buildConfigField("String", "BASE_URL", properties["BASE_URL"])
+            buildConfigField("String", "MAP_KEY", properties["MAP_KEY"])
             buildConfigField("String", "BUILD_TIME", "\"" + System.currentTimeMillis().toString() + "\"")
         }
         release {
             buildConfigField("String", "BASE_URL", properties["BASE_URL"])
+            buildConfigField("String", "MAP_KEY", properties["MAP_KEY"])
             buildConfigField("String", "BUILD_TIME", "\"" + System.currentTimeMillis().toString() + "\"")
 
             minifyEnabled false
@@ -78,6 +80,9 @@ dependencies {
     implementation(Libs.WorkManager.work)
     implementation(Libs.Lottie.lottie)
     implementation(Libs.ScrollProgress.scrollProgress)
+    implementation(Libs.ConstraintLayout.constraintLayout)
+    implementation(Libs.Google.googleServicesGradlePlugin)
+    implementation(Libs.Google.googleMap)
     kapt(Libs.Room.kapt)
 
     implementation 'com.google.code.gson:gson:2.9.0'

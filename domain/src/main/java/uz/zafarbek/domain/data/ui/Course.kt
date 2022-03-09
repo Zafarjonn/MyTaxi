@@ -10,7 +10,7 @@ data class Course(
     val id: String,
     val title: String,
     val icon: Int,
-    val sections: List<Section>?,
+    val sections: List<String>?,
     val isCompleted: Boolean
 ) {
     fun toUi(): CourseEntity = CourseEntity(id, title, icon, null, isCompleted)

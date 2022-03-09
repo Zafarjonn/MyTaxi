@@ -61,6 +61,8 @@ fun ShimmerFrameLayout.stop() {
     this.stopShimmer()
 }
 
+fun ViewGroup.inflate(): LayoutInflater = LayoutInflater.from(context)
+
 fun ShimmerFrameLayout.isVisible(boolean: Boolean) {
     if (boolean) {
         start()

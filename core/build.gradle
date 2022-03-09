@@ -31,9 +31,11 @@ android {
 
         debug {
             buildConfigField("String", "BASE_URL", properties["BASE_URL"])
+            buildConfigField("String", "MAP_KEY", properties["MAP_KEY"])
         }
         release {
             buildConfigField("String", "BASE_URL", properties["BASE_URL"])
+            buildConfigField("String", "MAP_KEY", properties["MAP_KEY"])
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

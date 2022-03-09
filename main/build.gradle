@@ -22,5 +22,8 @@ dependencies {
 
     implementation(Libs.Lottie.lottie)
     implementation(Libs.ScrollProgress.scrollProgress)
+    implementation(Libs.Google.googleServicesGradlePlugin)
+    implementation(Libs.Google.googleMap)
+    implementation(Libs.ConstraintLayout.constraintLayout)
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uz.zafarbek.core.utils.DrawerContent xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_drawer"
+    app:layoutDescription="@xml/layout_main1_scene">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+
+        <include
+            android:id="@+id/map_layout"
+            layout="@layout/layout_map" />
+        <include
+            android:id="@+id/bottom_sheet_container"
+            layout="@layout/container_bottom_sheet" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</uz.zafarbek.core.utils.DrawerContent>

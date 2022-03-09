@@ -8,11 +8,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
     <color name="green">#00A34C</color>
     <color name="yellow">#FBC02D</color>
+    <color name="component_color_yellow_light">#fffaf055</color>
+    <color name="component_color_yellow_normal">#fffae436</color>
+    <color name="component_color_yellow_toxic">#fffce000</color>
+    <color name="component_color_yellow_toxic_dark">#ffe0b400</color>
+    <color name="black_light">#272724</color>
     <color name="red">#D32F2F</color>
     <color name="window_color">#F4F4F4</color>
-
+    <color name="bg_drawer">#1B1B19</color>
     <color name="splashBack">#EB4E24EE</color>
     <color name="splashMain">#4F28EE</color>
 
@@ -22,8 +28,11 @@
     <color name="next_3">#2F6DFF</color>
     <color name="next_4">#5FA091</color>
     <color name="dark_navy">#0E2132</color>
-
-    <color name="grey_400">#777575</color>
+    <color name="line_color">#fff1f0ec</color>
+    <color name="tint_nav">#BFC3CF</color>
+    <color name="skip_color">#B7B6C3</color>
+    <color name="grey_400">#BEBEBE</color>
+    <color name="grey_600">#6B6B6B</color>
     <color name="grey_4001">#BCBCBC</color>
     <color name="tab_unselected_color">#6A6E77</color>
     <color name="tab_selected_color">#515151</color>

@@ -9,6 +9,7 @@ object Libs {
         private const val googleAuthVersion = "20.1.0"
         const val googleServicesGradlePlugin =
             "com.google.gms:google-services:$googleServicesVersion"
+        const val googleMap="com.google.android.gms:play-services-maps:11.8.0"
         const val googleAuth = "com.google.android.gms:play-services-auth:$googleAuthVersion"
     }
 

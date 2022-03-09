@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import androidx.fragment.app.Fragment
 import uz.zafarbek.core.R
 import uz.zafarbek.core.utils.Time
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -33,7 +34,14 @@ fun Fragment.showDatePicker(
         }
     }.show()
 }
-
+fun String?.formatToLongDate(simpleDateFormat: SimpleDateFormat): Long {
+    this?.let {
+        if (it.isEmpty()) return -1
+        return simpleDateFormat.parse(it)?.time ?: 0
+    } ?: run {
+        return -1
+    }
+}
 fun getYear() = Calendar.getInstance().get(Calendar.YEAR)
 
 fun getMonth() = Calendar.getInstance().get(Calendar.MONTH)

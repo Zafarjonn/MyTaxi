@@ -21,6 +21,13 @@
     <string name="index">Index</string>
     <string name="description">Description</string>
     <string name="c1_s1_title">Fundamnetal malumotlar</string>
+    <string name="my_taxi">MyTaxi</string>
+    <string name="history">Мои поездки</string>
+    <string name="pay_info">Способы оплаты</string>
+    <string name="favorite_addresses">Избранные адреса</string>
+    <string name="zafarbek_ntoshtemirov">Zafarbek \nToshtemirov</string>
+    <string name="phone_number">+99899 3270758</string>
+    <string name="ride_history">Ride History</string>
     <string-array name="setting">
         <item>@string/about_app</item>
         <item>@string/about_org</item>

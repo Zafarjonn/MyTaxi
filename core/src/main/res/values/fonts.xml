@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="component_taxi_bold" type="font">@font/ya_bold</item>
+    <item name="component_taxi_light" type="font">@font/ya_light</item>
+    <item name="component_taxi_medium" type="font">@font/ya_medium</item>
+    <item name="taxi_bold" type="font">@font/component_taxi_bold</item>
+    <item name="taxi_light" type="font">@font/component_taxi_light</item>
+    <item name="taxi_medium" type="font">@font/component_taxi_medium</item>
+    <item name="taxi_regular" type="font">@font/component_taxi_regular</item>
+</resources>

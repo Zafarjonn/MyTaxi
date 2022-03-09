@@ -3,9 +3,7 @@ package uz.zafarbek.domain.data.database
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import org.jetbrains.annotations.NotNull
 import uz.zafarbek.domain.data.ui.Course
-import uz.zafarbek.domain.data.ui.Section
 
 @Entity(tableName = "course")
 data class CourseEntity(
